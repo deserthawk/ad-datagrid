@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import 'jest-canvas-mock'
 
-import BasicDatagrid, { rowItem } from '../../../src/lib/components/BasicDatagrid'
+import BasicDatagrid, { rowItem } from '../../../src/lib/components/basicdatagrid/BasicDatagrid'
 
 const row1: Array<rowItem> = [
   { header: 'Id', value: 1 },

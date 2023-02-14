@@ -1,10 +1,10 @@
 import React from 'react'
 
-type TableHeaderProp = {
+type BasicTableHeaderProp = {
   headerList: Array<string>
 }
 
-export default function TableHeader(prop: TableHeaderProp) {
+export default function TableHeader(prop: BasicTableHeaderProp) {
   const { headerList } = prop
   return (
     <thead>
