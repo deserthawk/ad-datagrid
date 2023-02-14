@@ -1,7 +1,6 @@
 The MIT License (MIT)
 
-Original work Copyright (c) 2014 Prometheus Research
-Modified work Copyright 2015 Adazzle
+Original work Copyright (c) 2023 Arda Denli
 
 For the original source code please see https://github.com/deserthawk/ad-datagrid
 
@@ -10,10 +9,7 @@ of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+furnished to do so.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
