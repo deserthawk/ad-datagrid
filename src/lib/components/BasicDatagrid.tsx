@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/datagrid.css'
+import TableHeader from './TableHeader'
 
 export type rowItem = {
   value: string | number
@@ -34,13 +35,7 @@ export default function BasicDatagrid(prop: BasicDatagridProp) {
   return (
     <>
       <table className='basic-datagrid'>
-        <thead>
-          <tr>
-            {theHeaderList.map((item, index) => {
-              return <th key={index}>{item}</th>
-            })}
-          </tr>
-        </thead>
+        <TableHeader headerList={theHeaderList} />
         <tbody>
           {rowList.map((row, indexRow) => {
             return (
