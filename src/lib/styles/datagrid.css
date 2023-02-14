@@ -1,0 +1,17 @@
+.basic-datagrid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.basic-datagrid table, .basic-datagrid th, .basic-datagrid td {
+  border: 1px solid #ACACAC;
+}
+.basic-datagrid td {
+  height: 1.5em;
+  padding-left: 1em;
+}
+.basic-datagrid th {
+  height: 1.9995em;
+}
+.basic-datagrid tbody tr:hover {
+  background-color: #FFD3D3;
+}/*# sourceMappingURL=datagrid.css.map */
