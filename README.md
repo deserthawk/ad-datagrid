@@ -1,5 +1,10 @@
 # ad-datagrid
 
+[![NPM version][npm-image]][npm-url]
+[![Build][github-build]][github-build-url]
+![npm-typescript]
+[![License][github-license]][github-license-url]
+
 The purpose of this package is to create tables dynamically. It makes a table according to the data in the sent json file.
 
 
@@ -30,3 +35,10 @@ function App() {
 
 It can be written custom error message.
 
+[npm-url]: https://www.npmjs.com/package/ad-datagrid
+[npm-image]: https://img.shields.io/npm/v/ad-datagrid
+[github-license]: https://img.shields.io/github/license/deserthawk/ad-datagrid
+[github-license-url]: https://github.com/deserthawk/ad-datagrid/blob/master/LICENSE
+[github-build]: https://github.com/deserthawk/ad-datagrid/actions/workflows/publish.yml/badge.svg
+[github-build-url]: https://github.com/deserthawk/ad-datagrid/actions/workflows/publish.yml
+[npm-typescript]: https://img.shields.io/npm/types/ad-datagrid
