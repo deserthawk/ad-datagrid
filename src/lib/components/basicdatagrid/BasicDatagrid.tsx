@@ -1,6 +1,8 @@
 import React from 'react'
+
 import '../../styles/datagrid.css'
 import BasicTableHeader from './BasicTableHeader'
+import BasicTableRow from './BasicTableRow'
 
 export type rowItem = {
   value: string | number
@@ -33,21 +35,9 @@ export default function BasicDatagrid(prop: BasicDatagridProp) {
   }
 
   return (
-    <>
-      <table className='basic-datagrid'>
-        <BasicTableHeader headerList={theHeaderList} />
-        <tbody>
-          {rowList.map((row, indexRow) => {
-            return (
-              <tr key={indexRow} className={indexRow % 2 === 1 ? 'stripe-color' : ''}>
-                {row.map((item, indexItem) => (
-                  <td key={indexItem}>{item.value}</td>
-                ))}
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
-    </>
+    <table className='basic-datagrid'>
+      <BasicTableHeader headerList={theHeaderList} />
+      <BasicTableRow rowList={rowList} />
+    </table>
   )
 }
