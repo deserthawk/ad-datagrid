@@ -17,6 +17,7 @@ type BasicDatagridProp = {
 
 export default function BasicDatagrid(prop: BasicDatagridProp) {
   const { rowList, pCheckRowError } = prop
+  const maxTextLength = prop.maxTextLength && prop.maxTextLength > 0 ? prop.maxTextLength : -1
   const theHeaderList = rowList[0].map((item) => item.header)
   const checkRows = () => {
     const rowLength = rowList.length > 0 ? rowList[0].length : 0
@@ -37,7 +38,7 @@ export default function BasicDatagrid(prop: BasicDatagridProp) {
   return (
     <table className='basic-datagrid'>
       <BasicTableHeader headerList={theHeaderList} />
-      <BasicTableRow rowList={rowList} />
+      <BasicTableRow rowList={rowList} maxTextLength={maxTextLength} />
     </table>
   )
 }
