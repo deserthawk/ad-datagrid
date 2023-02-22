@@ -64,4 +64,38 @@
   100% {
     visibility: visible;
   }
+}
+.basictable-pagination {
+  border-left: 1px solid #ACACAC;
+  border-bottom: 1px solid #ACACAC;
+  border-right: 1px solid #ACACAC;
+  height: 2em;
+}
+
+.basictable-pagination-button {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.basictable-pagination-action {
+  background-color: #EEEEEE;
+}
+.basictable-pagination-action:hover {
+  background-color: white;
+}
+
+.basictable-pagination-number {
+  background-color: white;
+}
+
+.basictable-pagination-selected {
+  background-color: #FFD3D3;
+}
+
+.hide-row {
+  display: none;
 }/*# sourceMappingURL=datagrid.css.map */
