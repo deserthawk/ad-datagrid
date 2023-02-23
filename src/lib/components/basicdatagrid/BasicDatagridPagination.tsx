@@ -8,10 +8,11 @@ type BasicDatagridPaginationProp = {
   firstPage: () => void
   lastPage: () => void
   pageLinkCount: number
+  pageCount: number
 }
 
 export default function BasicDatagridPagination(prop: BasicDatagridPaginationProp) {
-  const { handlePagination, page, nextPage, previousPage, firstPage, lastPage, pageLinkCount } = prop
+  const { handlePagination, page, nextPage, previousPage, firstPage, lastPage, pageLinkCount, pageCount } = prop
   const [buttons, setButtons] = useState<Array<any>>([])
   const [maxPage, setMaxPage] = useState(pageLinkCount)
   const [minPage, setMinPage] = useState(1)
@@ -44,7 +45,7 @@ export default function BasicDatagridPagination(prop: BasicDatagridPaginationPro
 
   useEffect(() => {
     let tempMinPage = minPage
-    let tempMaxPage = maxPage
+    let tempMaxPage = pageCount < maxPage ? pageCount : maxPage
 
     if (tempMinPage > page) {
       tempMinPage = page
