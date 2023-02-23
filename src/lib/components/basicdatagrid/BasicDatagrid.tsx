@@ -85,6 +85,7 @@ export default function BasicDatagrid(prop: BasicDatagridProp) {
         firstPage={firstPage}
         lastPage={lastPage}
         pageLinkCount={paginationButton}
+        pageCount={pageCount}
       />
     </>
   )

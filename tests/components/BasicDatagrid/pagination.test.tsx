@@ -6,7 +6,7 @@ import 'jest-canvas-mock'
 
 import BasicDatagrid from '../../../src/lib/components/basicdatagrid/BasicDatagrid'
 
-import itemList from './generateData'
+import itemList, { CreateTable } from './generateData'
 import userEvent from '@testing-library/user-event'
 
 test('check pagination default max number', async () => {
@@ -41,4 +41,10 @@ test('check pagination last and first buttons', async () => {
   await userEvent.click(screen.getByText('First'))
   expect(screen.queryAllByText('10', { selector: 'button' })).toHaveLength(0)
   expect(screen.queryAllByText('1', { selector: 'button' })).toHaveLength(1)
+})
+
+test('check pagination row count lower than default pagination button number', async () => {
+  const list = CreateTable(20)
+  render(<BasicDatagrid rowList={list} />)
+  expect(screen.queryAllByText('3', { selector: 'button' })).toHaveLength(0)
 })
