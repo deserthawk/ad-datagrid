@@ -42,3 +42,7 @@ It can be written custom error message.
 [github-build]: https://github.com/deserthawk/ad-datagrid/actions/workflows/publish.yml/badge.svg
 [github-build-url]: https://github.com/deserthawk/ad-datagrid/actions/workflows/publish.yml
 [npm-typescript]: https://img.shields.io/npm/types/ad-datagrid
+## Demo
+
+BasicDatagrid: [demo](https://deserthawk.github.io/ad-datagrid/)
+
