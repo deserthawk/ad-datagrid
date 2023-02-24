@@ -1,4 +1,4 @@
-import { rowItem } from '../../../src/lib/components/basicdatagrid/BasicDatagrid'
+import { rowItem } from 'ad-datagrid'
 
 const ValueArray = [
   'Lorem ipsum dolor sit amet.',
@@ -46,6 +46,6 @@ export function CreateTable(rowNumber: number): Array<Array<rowItem>> {
   return result
 }
 
-const itemList: Array<Array<rowItem>> = CreateTable(100)
+const itemList: Array<Array<rowItem>> = CreateTable(1000)
 
 export default itemList
