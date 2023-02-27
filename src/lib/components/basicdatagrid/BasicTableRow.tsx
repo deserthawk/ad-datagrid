@@ -8,10 +8,23 @@ type BasicTableRowProp = {
   maxTextLength: number
   page: number
   pageItemCount: number
+  pHeaderList: Array<string>
 }
 
 export default function BasicTableRow(prop: BasicTableRowProp) {
-  const { rowList, maxTextLength, page, pageItemCount } = prop
+  const { rowList, maxTextLength, page, pageItemCount, pHeaderList } = prop
+
+  function setTableCell(row: rowItem[]) {
+    const tempRow: Array<JSX.Element> = []
+    pHeaderList.map((header) => {
+      row.map((cell, indexCell) => {
+        if (cell.header === header) {
+          tempRow.push(<BasicTableCell item={cell} maxTextLength={maxTextLength} key={indexCell} />)
+        }
+      })
+    })
+    return <>{tempRow.map((item) => item)}</>
+  }
 
   return (
     <tbody>
@@ -19,9 +32,7 @@ export default function BasicTableRow(prop: BasicTableRowProp) {
         const pHideRow = !(page * pageItemCount > indexRow && (page - 1) * pageItemCount <= indexRow) ? ' hide-row' : ''
         return (
           <tr key={indexRow} className={(indexRow % 2 === 1 ? 'stripe-color' : '') + pHideRow}>
-            {row.map((item, indexItem) => (
-              <BasicTableCell item={item} maxTextLength={maxTextLength} key={indexItem} />
-            ))}
+            {setTableCell(row)}
           </tr>
         )
       })}
