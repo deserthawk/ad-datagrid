@@ -11,7 +11,7 @@ The purpose of this package is to create tables dynamically. It makes a table ac
 ## Usage/Examples
 
 ```javascript
-import BasicDatagrid, { rowItem } from "ad-datagrid"
+import { BasicDatagrid, rowItem } from "ad-datagrid"
 
 const row1: Array<rowItem> = [
     { header: "Id", value: 1}

@@ -20,12 +20,13 @@ type BasicDatagridProp = {
   maxTextLength?: number
   pageItemCount?: number
   pPaginationButton?: number
+  pHeaderList?: Array<string>
 }
 
 export default function BasicDatagrid(prop: BasicDatagridProp) {
   const { rowList, pCheckRowError } = prop
   const maxTextLength = prop.maxTextLength && prop.maxTextLength > 0 ? prop.maxTextLength : -1
-  const theHeaderList = rowList[0].map((item) => item.header)
+  const theHeaderList = prop.pHeaderList ? prop.pHeaderList : rowList[0].map((item) => item.header)
   const pageItemCount = prop.pageItemCount ? prop.pageItemCount : 10
   const paginationButton = prop.pPaginationButton ? prop.pPaginationButton : 5
   const [page, setPage] = useState<number>(1)
@@ -75,7 +76,13 @@ export default function BasicDatagrid(prop: BasicDatagridProp) {
     <>
       <table className='basic-datagrid'>
         <BasicTableHeader headerList={theHeaderList} />
-        <BasicTableRow rowList={rowList} maxTextLength={maxTextLength} page={page} pageItemCount={pageItemCount} />
+        <BasicTableRow
+          rowList={rowList}
+          maxTextLength={maxTextLength}
+          page={page}
+          pageItemCount={pageItemCount}
+          pHeaderList={theHeaderList}
+        />
       </table>
       <BasicDatagridPagination
         handlePagination={handlePagination}
